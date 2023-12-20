@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/new-repositiry/static/css/main.7acaea2f.css",
+    "main.js": "/new-repositiry/static/js/main.551c8ae5.js",
+    "index.html": "/new-repositiry/index.html",
+    "main.7acaea2f.css.map": "/new-repositiry/static/css/main.7acaea2f.css.map",
+    "main.551c8ae5.js.map": "/new-repositiry/static/js/main.551c8ae5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.551c8ae5.js"
+  ]
+}
