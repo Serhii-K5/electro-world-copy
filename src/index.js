@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/new-repositiry">
+        <BrowserRouter basename="/electro-world">
           <App />
         </BrowserRouter>
       </PersistGate>
