@@ -1,6 +1,19 @@
 import styled from "styled-components";
 import { transition } from 'components/ConstComponentsStyle/ConstComponentsStyle.styled';
 
+export const Ul = styled.ul`
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 5px 16px;
+`;
+
+
+
+
+
+
+
 export const VodafoneBg = styled.div`
   display: inline-flex;
   border-radius: 50%;

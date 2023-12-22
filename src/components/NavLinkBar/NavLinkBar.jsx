@@ -29,6 +29,9 @@ import lang from "assets/json/language.json";
 import { GiHamburgerMenu } from "react-icons/gi";
 import electricity from "assets/images/svg/electricity.svg";
 
+// import { selectCategories } from 'redux/selectors';
+// import { changeCategory } from 'redux/slice/categorySlice';
+
 
 const NavLinkBar = () => {
   const dispatch = useDispatch();
@@ -38,15 +41,14 @@ const NavLinkBar = () => {
   const [isModalCatalogShown, setIsModalCatalogShown] = useState(false);
   const [isChangeModalCatalog, setIsChangeModalCatalog] = useState(false);
 
+  // const category = useSelector(selectCategories);
+
   
   useEffect(() => {
     directoryPath > 0
       ? setIsChangeModalCatalog(true)
-      : setIsChangeModalCatalog(false);
-    
-    // console.log(directoryPath);
-  }, [directoryPath]);
-  
+      : setIsChangeModalCatalog(false);    
+  }, [directoryPath]);  
   
   const onCloseModal = () => {
     setIsModalShown(false);
@@ -54,6 +56,7 @@ const NavLinkBar = () => {
 
   const onOpenModal = () => {
     setIsModalShown(true);
+    console.log(isChangeModalCatalog);
   };
 
   const onOpenCatalogModal = () => {
@@ -65,13 +68,14 @@ const NavLinkBar = () => {
     setIsModalCatalogShown(false);
   };
 
-  const is = () => {
-    return (isChangeModalCatalog || !isChangeModalCatalog) ? '' : '';
-  }
+  // const createCategory = (id) => {
+  //   dispatch(changeCategory(id));
+  //   return <CategorySelection parentId={id} />;
+  // };
+  
 
   return (
     <>
-      {is}
       <DivNav>
         <div
           onMouseEnter={onOpenCatalogModal}
@@ -90,10 +94,12 @@ const NavLinkBar = () => {
               <UlCatalog>
                 <li key={0} style={{ border: '1px solid grey' }}>
                   <CategorySelection parentId={0} />
+                  {/* {() => createCategory(0)} */}
                 </li>
                 {directoryPath.map((item, index) => (
                   <li key={index + 1} style={{ border: '1px solid grey' }}>
                     <CategorySelection parentId={item.cat_id} />
+                    {/* {() => createCategory(item.cat_id)} */}
                   </li>
                 ))}
               </UlCatalog>

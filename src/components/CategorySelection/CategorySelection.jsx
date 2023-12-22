@@ -5,13 +5,21 @@ import { Link } from 'react-router-dom';
 
 import { Li } from "./CategorySelection.styled";
 // import CategoryPage from 'pages/CategoryPage/CategoryPage';
+import { changeCategory } from 'redux/slice/categorySlice';
 
 const CategorySelection = ({ parentId }) => {
   const dispatch = useDispatch();
   
   const categoryChange = value => {
     dispatch(changeDirectoryPath(value));
+    dispatch(changeCategory(value.cat_parentId));
   };
+
+  // const onClick = value => {
+  //   dispatch(changeDirectoryPath(value));
+  //   dispatch(changeCategory(value.cat_parentId));
+  // };
+
   
   return (
     <ul>
@@ -22,14 +30,11 @@ const CategorySelection = ({ parentId }) => {
               key={index}
               className={parentId > 0 && 'parent'}
               onMouseEnter={() => categoryChange(el)}
+              // onClick={() => onClick(el)}
             >
-              <Link to="/categories"> {el.cat_name} {' >'}</Link>
-              {/* {el.cat_name} {' >'} */}
-              {/* <Link to="/categories">
-                <CategoryPage category={el}>
-                  {el.cat_name} {' >'}
-                </CategoryPage>
-              </Link> */}
+              <Link to="/categories">
+                {el.cat_name} {' >'}
+              </Link>
             </Li>
           )
       )}

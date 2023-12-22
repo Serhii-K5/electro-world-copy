@@ -3,14 +3,34 @@ import styled from 'styled-components';
 // import { transition } from 'components/ConstComponentsStyle/ConstComponentsStyle.styled';
 
 
-export const Container = styled.div`
+// export const Container = styled.div`
+//   display: flex;
+//   padding: 16px;
+//   max-width: 1440px;
+//   margin: 0 auto;
+//   // background-color: #f6f8fd;
+//   // box-shadow: 0 0 0.75rem;
+// `;
+
+export const Ul = styled.ul`
   display: flex;
   padding: 16px;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #f6f8fd;
-  box-shadow: 0 0 0.75rem;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 `;
+
+// export const Li = styled.li`
+//   display: flex;
+//   padding: 16px;
+//   width: 24vw;
+//   gap: 10px;
+//   box-shadow: 0 0 0.75rem;
+// `;
+
+
 
 // export const Ul = styled.ul`
 //   display: flex;
