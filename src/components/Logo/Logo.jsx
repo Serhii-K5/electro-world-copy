@@ -1,6 +1,6 @@
 import { BgLogo, TextLogo, } from './Logo.styled';
 
-export const Logo = () => {
+const Logo = () => {
   <BgLogo>
     <TextLogo>
       <b> Electro world </b>
@@ -8,4 +8,4 @@ export const Logo = () => {
   </BgLogo>;
 }
 
-// export default Logo;
+export default Logo;

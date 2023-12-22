@@ -23,6 +23,7 @@ import MessageModule from "components/MessageModule/MessageModule";
 import {LanguageBar} from "components/LanguageBar/LanguageBar";
 import AdressBar from 'components/AdressBar/AdressBar';
 import Footer from 'components/Footer/Footer';
+// import {Footer} from 'components/FooterE/FooterE';
 import lang from "assets/json/language.json";
 
 import { SlMagnifier } from "react-icons/sl";

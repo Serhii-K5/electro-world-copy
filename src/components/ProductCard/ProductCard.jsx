@@ -143,51 +143,50 @@ export default function Product({ card }) {
             <p>{lang[languages].productCard_related}</p>
           </Aside>}
           <div>          
-          <OptionDiv>
-            {card.photo === "" ?
-              <Img src={noPhoto} alt={card.name} />
-              : <Img src={card.photo} alt={card.name} />          
-            }
-            <OptionContainer>
-              <PriceOld>{card.oldPrice} грн.</PriceOld>
-              <Price>{card.price} грн.</Price>
-              <hr />
-              <QuantityDiv>
-                <Div
-                  style={isVisible ? {display: isOrder ? "none" : "flex",  color: "var(--text-color-primary-black)", borderColor: "var(--text-color-grey)"} : { color: "white", borderColor: "white" }} 
-                  onClick={decrease}
-                >-</Div>
-                <Input
-                  // type="number"
-                  // defaultValue={quantityGoods}  
-                  style={isVisible || isOrder ? {color: "var(--text-color-primary-black)", borderColor: "var(--text-color-grey)"} : isOrder ? {color: "var(-text-color-white)", borderColor: "var(-text-color-white)"} : {color: "white", borderColor: "white"}}
-                  onChange={handleChange}
-                  value= {Number(quantityGoods)}
-                />
-                <Div  
-                  style={isVisible ? {display: isOrder ? "none" : "flex", color: "var(--text-color-primary-black)", borderColor: "var(--text-color-grey)"} : {display: isOrder ? "none" : "flex", color: "white", borderColor: "white"}}
-                  onClick={increase}
-                >+</Div>
-              </QuantityDiv>    
-                        
-              <ButtonDiv 
-                className={isOrder && "isOrder"}
-                onClick={handleClick}
-                // style={{ backgroundColor: isOrder ? "var(--bg-second-orange)" : "var(--bg-second-green)" }}
-              >
-                {isOrder ? 
-                  // "Видалити замовлення" : "Додати до замовлення"
-                  lang[languages].productCard_orderDel
-                  : lang[languages].productCard_orderAdd
-                }
-              </ButtonDiv> 
-            </OptionContainer>
-          </OptionDiv>
-          {/* <p>Код: {card.code}</p> */}
-          <p>{lang[languages].productCard_codeTitle}: {card.code}</p>
-          <Name onClick={onOpenModal}>{card.name}</Name>
-          <Memo>{card.memo}</Memo>
-            
+            <OptionDiv>
+              {card.photo === "" ?
+                <Img src={noPhoto} alt={card.name} />
+                : <Img src={card.photo} alt={card.name} />          
+              }
+              <OptionContainer>
+                <PriceOld>{card.oldPrice} грн.</PriceOld>
+                <Price>{card.price} грн.</Price>
+                <hr />
+                <QuantityDiv>
+                  <Div
+                    style={isVisible ? {display: isOrder ? "none" : "flex",  color: "var(--text-color-primary-black)", borderColor: "var(--text-color-grey)"} : { color: "white", borderColor: "white" }} 
+                    onClick={decrease}
+                  >-</Div>
+                  <Input
+                    // type="number"
+                    // defaultValue={quantityGoods}  
+                    style={isVisible || isOrder ? {color: "var(--text-color-primary-black)", borderColor: "var(--text-color-grey)"} : isOrder ? {color: "var(-text-color-white)", borderColor: "var(-text-color-white)"} : {color: "white", borderColor: "white"}}
+                    onChange={handleChange}
+                    value= {Number(quantityGoods)}
+                  />
+                  <Div  
+                    style={isVisible ? {display: isOrder ? "none" : "flex", color: "var(--text-color-primary-black)", borderColor: "var(--text-color-grey)"} : {display: isOrder ? "none" : "flex", color: "white", borderColor: "white"}}
+                    onClick={increase}
+                  >+</Div>
+                </QuantityDiv>    
+                          
+                <ButtonDiv 
+                  className={isOrder && "isOrder"}
+                  onClick={handleClick}
+                  // style={{ backgroundColor: isOrder ? "var(--bg-second-orange)" : "var(--bg-second-green)" }}
+                >
+                  {isOrder ? 
+                    // "Видалити замовлення" : "Додати до замовлення"
+                    lang[languages].productCard_orderDel
+                    : lang[languages].productCard_orderAdd
+                  }
+                </ButtonDiv> 
+              </OptionContainer>
+            </OptionDiv>
+            {/* <p>Код: {card.code}</p> */}
+            <p>{lang[languages].productCard_codeTitle}: {card.code}</p>
+            <Name onClick={onOpenModal}>{card.name}</Name>
+            <Memo>{card.memo}</Memo>            
           </div>
         </DivHov>
       </Container>

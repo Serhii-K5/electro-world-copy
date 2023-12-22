@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { transition } from 'components/ConstComponentsStyle/ConstComponentsStyle.styled';
 
-const transition = `150ms linear`;
+// const transition = `150ms linear`;
 
 export const Container = styled.div`
   position: relative;
@@ -185,8 +186,8 @@ export const Memo = styled.p`
   font-weight: 400;
   line-height: 1.5;
   overflow: hidden;
-  whiteSpace: wrap;
-  textOverflow: ellipsis;
+  white-space: wrap;
+  text-overflow: ellipsis;
 `;
 
 export const Ul = styled.ul`

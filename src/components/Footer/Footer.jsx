@@ -1,9 +1,9 @@
-import { Logo } from 'components/Logo/Logo';
+// import Logo from 'components/Logo/Logo';
 
-const Footer = () => {
-  <>
+ const Footer = () => {
+  <footer>
     <section>
-      <Logo />
+      {/* <Logo /> */}
       <p>
         Щодня оновлюється каталог, більше 100 000 товарів в асортименті. Оптові
         ціни. Власна система логістики. Унікальна пропорційна сумі замовлення
@@ -11,7 +11,8 @@ const Footer = () => {
       </p>
       <p>© 2023 Electro world. Всі права захищені</p>
     </section>
-  </>;
+  </footer>; 
+  
 }
 
 export default Footer;
