@@ -101,25 +101,14 @@ export default function Product({ card }) {
     }
   };
   
-  const increase = () => {
-    // quantityGoods < 1 && (card.ordered = 1);
-    setQuantityGoods(quantityGoods + 1);
-    // card.ordered = setQuantityGoods(quantityGoods + 1);
-    // card.ordered = quantityGoods;
-    // card.ordered += 1;
-  };
-  
-  const handleClick = () => {
-    {
-      //  isOrder ? onDelete() : (card.ordered <1 && increase(), onAdd() );
+    const handleClick = () => {
       isOrder ? onDelete() : onAdd();
-    }
+    };
+  
+  const increase = () => {
+    setQuantityGoods(quantityGoods + 1);
   };
-  
-  // const productName = (name) => {
-  //   return name.replace('\"'/i,'"');
-  // };
-  
+    
   const onOpenModal = () => {
     setIsModalShown(true);
   };

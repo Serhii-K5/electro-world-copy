@@ -61,6 +61,7 @@ const Product = ({ card }) => {
   
   const onCloseModal = () => {
     setIsModalShown(false);
+    setIsCheckoutModalShown(false);
   };
   
   const onOpenModal = () => {
