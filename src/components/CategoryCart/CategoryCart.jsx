@@ -4,7 +4,6 @@ import {
 
 import photo from "assets/images/no_photo.jpg";
 
-
 const CategoryCart = ({ categoryName }) => {
   return (
     <Div>

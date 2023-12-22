@@ -64,7 +64,7 @@ export const DivHov = styled.div`
   &:focus {
     width: 555px;
     height: 350px;
-    z-index: 100;
+    z-index: 70;
     filter: drop-shadow(0 0 0.75rem gray);
    }
 `;

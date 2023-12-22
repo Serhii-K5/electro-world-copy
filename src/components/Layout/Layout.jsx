@@ -13,7 +13,6 @@ import {
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 
 // import { GiShoppingCart } from "react-icons/gi";
-
 // import logo from "../../assets/images/logo.png";
 
 import { useSelector } from "react-redux";
@@ -23,6 +22,7 @@ import { selectLanguages } from "redux/selectors";
 import MessageModule from "components/MessageModule/MessageModule";
 import {LanguageBar} from "components/LanguageBar/LanguageBar";
 import AdressBar from 'components/AdressBar/AdressBar';
+import Footer from 'components/Footer/Footer';
 import lang from "assets/json/language.json";
 
 import { SlMagnifier } from "react-icons/sl";
@@ -89,6 +89,9 @@ export default function Layout() {
       <div>
         <Outlet />
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
