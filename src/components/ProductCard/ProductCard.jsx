@@ -99,7 +99,7 @@ export default function Product({ card }) {
     if (quantityGoods > 1) {
       setQuantityGoods(quantityGoods - 1);
     }
-  }
+  };
   
   const increase = () => {
     // quantityGoods < 1 && (card.ordered = 1);
@@ -107,14 +107,14 @@ export default function Product({ card }) {
     // card.ordered = setQuantityGoods(quantityGoods + 1);
     // card.ordered = quantityGoods;
     // card.ordered += 1;
-  } 
+  };
   
   const handleClick = () => {
     {
       //  isOrder ? onDelete() : (card.ordered <1 && increase(), onAdd() );
       isOrder ? onDelete() : onAdd();
-    } 
-  }
+    }
+  };
   
   // const productName = (name) => {
   //   return name.replace('\"'/i,'"');

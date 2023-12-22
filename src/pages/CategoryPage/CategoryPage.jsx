@@ -25,7 +25,7 @@ import categories from 'assets/json/categories.json';
 
 const CategoryPage = () => {
   // const dispatch = useDispatch();
-  const category = useSelector(selectCategories);
+  const categoryId = useSelector(selectCategories);
 
   // const handleClick = value => {
   //   dispatch(changeCategory(value));
@@ -35,19 +35,19 @@ const CategoryPage = () => {
     <>
       <NavBar />
       {/* <Container> */}
-      <h2>Категории</h2>
+      {/* <h2>Категории</h2> */}
       {/* {categories.length > 0 && ( */}
       <Ul>
         {categories.map(
           item =>
-            item.cat_id === category && (
+            item.cat_parentId === categoryId && (
               <li key={item.cat_id}>
                 <CategoryCart categoryName={item.cat_name} />
               </li>
             )
         )}
       </Ul>
-      {console.log(category)}
+      {/* {console.log(category)} */}
       {/* )} */}
       {/* </Container> */}
     </>
