@@ -1,9 +1,9 @@
-// import Logo from 'components/Logo/Logo';
+import Logo from 'components/Logo/Logo';
 
  const Footer = () => {
   <footer>
     <section>
-      {/* <Logo /> */}
+      <Logo />
       <p>
         Щодня оновлюється каталог, більше 100 000 товарів в асортименті. Оптові
         ціни. Власна система логістики. Унікальна пропорційна сумі замовлення
